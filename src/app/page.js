@@ -1,101 +1,112 @@
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { MdCheckCircle } from "react-icons/md";
+import BasicForm from "@/components/GoogleForm";
+import ImageSlider from "@/components/ImageSlider";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="xl:container  w-full flex flex-col justify-center items-center">
+      <main className="w-full h-auto  flex flex-col justify-center items-center gap-0">
+        <section className="flex flex-col sm:flex-row justify-between  p-2 sm:p-4 md:p-6 lg:p-8 items-center w-full gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 mt-5 ">
+          <div className="flex flex-col justify-between items-center sm:w-full md:w-1/2 gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 2xl:gap-7 mt-5 sm:mt-7 md:mt-10 lg:mt-12 xl:mt-15">
+            <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-6xl text-center font-black text-gray-700">
+              Simple, fun and non-diagnostic
+            </h1>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-start text-gray-700 font-medium">
+              We encourage users to undergo comprehensive eye screenings,
+              increasing bookings for your practice
+            </p>
+            <div className="sm:w-1/2 lg:w-1/2 w-3/4 mt-8 ">
+              <h1 className="bg-[#C60D69] px-2 py-1 text-center rounded-sm text-white sm:px-3 sm:py-2  md:px-4 md:py-2  lg:px-4  text-2xl font-bold">
+                Launching Soon
+              </h1>
+            </div>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <div className="flex justify-center items-start w-full md:w-1/2 gap-4 mt-10">
             <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/images/eye-test-image.png"
+              width={500}
+              height={200}
+              alt="Logo"
+              className="w-full object-contain"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+          </div>
+        </section>
+
+        <section className="flex flex-col sm:flex-row justify-between  p-2 sm:p-4 md:p-6 lg:p-8 items-center w-full gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 mt-5 sm:mt-7 md:mt-10 lg:mt-12">
+          <div className="flex flex-col justify-between items-center sm:w-full gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 2xl:gap-7 mt-5 sm:mt-7 md:mt-10 lg:mt-12 xl:mt-15">
+            <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-center font-black text-gray-700 p-2 flex justify-center gap-4">
+              About{" "}
+              <span className="text-[#C60D69] border-2 border-[#C60D69] px-2 rounded-xl text-2xl sm:text-3xl md:text-4xl text-center inline-block w-full">
+                EyeScreen
+              </span>
+            </h1>
+
+            <div className="flex justify-center items-center bg-transparent w-full sm:w-3/4 lg:w-3/4 xl:w-1/2 gap-2 p-0 rounded-xl">
+              <MdCheckCircle style={{ color: "#C60D69" }} className="h-6 w-6" />
+              <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
+                  A platform designed to drive eye health awareness and to
+                  encourage users to undergo comprehensive eye tests
+                </p>
+              </div>
+            </div>
+
+            <div className="flex justify-center items-center bg-transparent w-full sm:w-3/4 lg:w-3/4 xl:w-1/2 gap-2 p-0 rounded-xl">
+              <MdCheckCircle style={{ color: "#C60D69" }} className="h-6 w-6" />
+              <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
+                  We achieve this by offering a simple, fun and non-diagnostic
+                  eye pre-screen on your website
+                </p>
+              </div>
+            </div>
+
+            <div className="flex justify-center items-center bg-transparent w-full sm:w-3/4 lg:w-3/4 xl:w-1/2 gap-2 p-0 rounded-xl">
+              <MdCheckCircle style={{ color: "#C60D69" }} className="h-6 w-6" />
+              <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
+                  After the pre-screen we encourage every participant to book a
+                  comprehensive eye test with your practice
+                </p>
+              </div>
+            </div>
+
+            <div className="flex justify-center items-center bg-transparent w-full sm:w-3/4 lg:w-3/4 xl:w-1/2 gap-2 p-0 rounded-xl">
+              <MdCheckCircle style={{ color: "#C60D69" }} className="h-6 w-6" />
+              <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
+                  The platform comes with a optional booking platform that
+                  connects to your calender
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="flex flex-col sm:flex-col justify-between  p-2 sm:p-4 md:p-6 lg:p-8 items-center w-full gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 mt-5 sm:mt-7 md:mt-10 lg:mt-12">
+          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-center font-black text-gray-700">
+            Our Tests
+          </h1>
+          <ImageSlider />
+        </section>
+        <section className="flex flex-col sm:flex-col justify-between  p-2 sm:p-4 md:p-6 lg:p-8 items-center w-full gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 mt-5 sm:mt-7 md:mt-10 lg:mt-12">
+          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-center font-black text-gray-700">
+            Reserve your 2-months trial spot
+          </h1>
+
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center text-gray-700 font-medium whitespace-pre-line w-full md:w-1/2">
+            Trial our platform, provide feedback, and cancel anytime. Join our
+            pilot program to help us serve you better!
+          </p>
+          <BasicForm />
+        </section>
+
+        <section className="flex flex-col sm:flex-col justify-between p-2 sm:p-4 md:p-6 lg:p-8 items-center w-full gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 mt-5 sm:mt-7 md:mt-10 lg:mt-12"></section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
