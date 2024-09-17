@@ -128,7 +128,7 @@ export default function BasicForm() {
           </div>
           <div className="form-control mt-4">
             <label className="block text-sm font-medium text-gray-700">
-              Should we change anything?
+              Share your thoughts
             </label>
             <textarea
               name="comment"
