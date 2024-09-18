@@ -1,43 +1,47 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import useSubmitOptometristData from "./hooks/optomhook";
 import PopupMessage from "./PopupMessage";
+import { v4 as uuidv4 } from "uuid";
+
 
 export default function BasicForm() {
-  const [state, setState] = useState({
-    name: "",
-    email: "",
-    website: "",
-    amount: "",
-    comment: "",
-  });
+  const [optomId, setOptomId] = useState(null);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [whatsApp, setWhatsApp] = useState("");
+  const [website, setWebsite] = useState("");
+  const [amount, setAmount] = useState("");
+  const [comment, setComment] = useState("");
+
+  const { submitOptometristData, loading, error, optomTotal } =
+    useSubmitOptometristData();
+
 
   const [isOpen, setIsOpen] = useState(false);
 
-   const onClose = () => {
-     setIsOpen(false);
+  const onClose = () => {
+    setIsOpen(false);
     window.location.reload();
-
-   };
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    // console.log("...............", name, value);
-
-    setState((prevProps) => ({
-      ...prevProps,
-      [name]: value,
-    }));
   };
 
-  const handleSubmit = (event) => {
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(state);
+  
+    await submitOptometristData(optomId, name,whatsApp, email, amount, comment);
     setIsOpen(true);
-    
   };
 
+  useEffect(() => {
+    if (!optomId) {
+      const uniqueId = uuidv4();
+      setOptomId(uniqueId)
+    }
+  }, [optomId])
   
+
 
   return (
     <div className="w-3/4 md:w-1/2 xl:w-1/4 p-4">
@@ -49,8 +53,20 @@ export default function BasicForm() {
           <input
             type="text"
             name="name"
-            value={state.name}
-            onChange={handleInputChange}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="mt-1 block w-full px-3 py-2 border text-black border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#C60D69]  focus:border-[#C60D69]  sm:text-sm"
+          />
+        </div>
+        <div className="form-control">
+          <label className="block text-sm font-medium text-gray-700">
+            WhatsApp Number
+          </label>
+          <input
+            type="text"
+            name="WhatsApp"
+            value={whatsApp}
+            onChange={(e) => setWhatsApp(e.target.value)}
             className="mt-1 block w-full px-3 py-2 border text-black border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#C60D69]  focus:border-[#C60D69]  sm:text-sm"
           />
         </div>
@@ -61,8 +77,8 @@ export default function BasicForm() {
           <input
             type="text"
             name="email"
-            value={state.email}
-            onChange={handleInputChange}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="mt-1 block w-full px-3 py-2 border text-black border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#C60D69]  focus:border-[#C60D69]  sm:text-sm"
           />
         </div>
@@ -73,8 +89,8 @@ export default function BasicForm() {
           <input
             type="text"
             name="website"
-            value={state.website}
-            onChange={handleInputChange}
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
             className="mt-1 block w-full px-3 py-2 border text-black border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#C60D69] focus:border-[#C60D69] sm:text-sm"
           />
         </div>
@@ -89,7 +105,7 @@ export default function BasicForm() {
                 type="radio"
                 name="amount"
                 value="R0.00"
-                onChange={handleInputChange}
+                onChange={(e) => setAmount(e.target.value)}
                 className="form-radio h-4 w-4 accent-[#C60D69] transition duration-150 ease-in-out"
               />
               <label className="text-gray-700">R0.00 </label>
@@ -99,7 +115,7 @@ export default function BasicForm() {
                 type="radio"
                 name="amount"
                 value="R300.00"
-                onChange={handleInputChange}
+                onChange={(e) => setAmount(e.target.value)}
                 className="form-radio h-4 w-4 accent-[#C60D69] transition duration-150 ease-in-out"
               />
               <label className="text-gray-700">R300.00</label>
@@ -109,7 +125,7 @@ export default function BasicForm() {
                 type="radio"
                 name="amount"
                 value="R600.00"
-                onChange={handleInputChange}
+                onChange={(e) => setAmount(e.target.value)}
                 className="form-radio h-4 w-4 accent-[#C60D69] transition duration-150 ease-in-out"
               />
               <label className="text-gray-700">R600.00 </label>
@@ -119,8 +135,8 @@ export default function BasicForm() {
               <input
                 type="radio"
                 name="amount"
-                value="R600.00"
-                onChange={handleInputChange}
+                value="R900.00"
+                onChange={(e) => setAmount(e.target.value)}
                 className="form-radio h-4 w-4 accent-[#C60D69] transition duration-150 ease-in-out"
               />
               <label className="text-gray-700">R900.00 </label>
@@ -132,8 +148,8 @@ export default function BasicForm() {
             </label>
             <textarea
               name="comment"
-              value={state.comment}
-              onChange={handleInputChange}
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
               className="mt-1 block w-full h-[6rem] px-3 py-2 border text-black border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#C60D69] focus:border-[#C60D69] sm:text-sm"
             />
           </div>
