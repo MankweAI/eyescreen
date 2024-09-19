@@ -25,6 +25,27 @@ const SimpleSlider = () => {
       <Slider {...settings}>
         <div className="flex items-center justify-center">
           <img
+            src="/images/quiz-a.png"
+            alt="Slide 1"
+            className="w-auto h-[500px]"
+          />
+        </div>
+        <div className="flex items-center justify-center">
+          <img
+            src="/images/quiz-b.png"
+            alt="Slide 1"
+            className="w-auto h-[500px]"
+          />
+        </div>
+        <div className="flex items-center justify-center">
+          <img
+            src="/images/quiz-c.png"
+            alt="Slide 1"
+            className="w-auto h-[500px]"
+          />
+        </div>
+        <div className="flex items-center justify-center">
+          <img
             src="/images/test-a.png"
             alt="Slide 1"
             className="w-auto h-[500px]"

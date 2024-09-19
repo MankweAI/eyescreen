@@ -5,7 +5,6 @@ import useSubmitOptometristData from "./hooks/optomhook";
 import PopupMessage from "./PopupMessage";
 import { v4 as uuidv4 } from "uuid";
 
-
 export default function BasicForm() {
   const [optomId, setOptomId] = useState(null);
   const [name, setName] = useState("");
@@ -18,7 +17,6 @@ export default function BasicForm() {
   const { submitOptometristData, loading, error, optomTotal } =
     useSubmitOptometristData();
 
-
   const [isOpen, setIsOpen] = useState(false);
 
   const onClose = () => {
@@ -26,22 +24,26 @@ export default function BasicForm() {
     window.location.reload();
   };
 
-
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
-    await submitOptometristData(optomId, name,whatsApp, email, amount, comment);
+
+    await submitOptometristData(
+      optomId,
+      name,
+      whatsApp,
+      email,
+      amount,
+      comment
+    );
     setIsOpen(true);
   };
 
   useEffect(() => {
     if (!optomId) {
       const uniqueId = uuidv4();
-      setOptomId(uniqueId)
+      setOptomId(uniqueId);
     }
-  }, [optomId])
-  
-
+  }, [optomId]);
 
   return (
     <div className="w-3/4 md:w-1/2 xl:w-1/4 p-4">
@@ -60,7 +62,7 @@ export default function BasicForm() {
         </div>
         <div className="form-control">
           <label className="block text-sm font-medium text-gray-700">
-            WhatsApp Number
+            WhatsApp Number (optional)
           </label>
           <input
             type="text"
@@ -95,53 +97,6 @@ export default function BasicForm() {
           />
         </div>
         <div className="form-control">
-          <label className="block text-sm font-medium text-gray-700">
-            How much would you pay for the platform?
-          </label>
-
-          <div className="flex flex-col space-y-4 mt-4">
-            <div className="flex items-center space-x-2">
-              <input
-                type="radio"
-                name="amount"
-                value="R0.00"
-                onChange={(e) => setAmount(e.target.value)}
-                className="form-radio h-4 w-4 accent-[#C60D69] transition duration-150 ease-in-out"
-              />
-              <label className="text-gray-700">R0.00 </label>
-            </div>
-            <div className="flex items-center space-x-2">
-              <input
-                type="radio"
-                name="amount"
-                value="R300.00"
-                onChange={(e) => setAmount(e.target.value)}
-                className="form-radio h-4 w-4 accent-[#C60D69] transition duration-150 ease-in-out"
-              />
-              <label className="text-gray-700">R300.00</label>
-            </div>
-            <div className="flex items-center space-x-2">
-              <input
-                type="radio"
-                name="amount"
-                value="R600.00"
-                onChange={(e) => setAmount(e.target.value)}
-                className="form-radio h-4 w-4 accent-[#C60D69] transition duration-150 ease-in-out"
-              />
-              <label className="text-gray-700">R600.00 </label>
-            </div>
-
-            <div className="flex items-center space-x-2">
-              <input
-                type="radio"
-                name="amount"
-                value="R900.00"
-                onChange={(e) => setAmount(e.target.value)}
-                className="form-radio h-4 w-4 accent-[#C60D69] transition duration-150 ease-in-out"
-              />
-              <label className="text-gray-700">R900.00 </label>
-            </div>
-          </div>
           <div className="form-control mt-4">
             <label className="block text-sm font-medium text-gray-700">
               Share your thoughts
