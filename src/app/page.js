@@ -89,7 +89,7 @@ export default function Home() {
 
         <section className="flex flex-col sm:flex-col justify-between  p-2 sm:p-4 md:p-6 lg:p-8 items-center w-full gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 mt-5 sm:mt-7 md:mt-10 lg:mt-12">
           <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-center font-black text-gray-700">
-            Our Tests
+            Quizzes & Tests
           </h1>
           <ImageSlider />
         </section>
