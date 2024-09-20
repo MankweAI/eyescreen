@@ -9,7 +9,7 @@ export async function POST(request) {
 
   const body = await request.json();
 
-  const { optomId, name, whatsApp, email, amount, comment } = body;
+  const { optomId, name, whatsApp, email, website, comment } = body;
 
   const optomRef = ref(database, `optometrists/${optomId}`);
   const optomCountRef = ref(database, `optomTotal/`);
@@ -20,10 +20,10 @@ export async function POST(request) {
 
     if (snapshot.exists()) {
       // Update existing optometrist data
-      await update(optomRef, { name, whatsApp, email, amount, comment });
+      await update(optomRef, { name, whatsApp, email, website, comment });
     } else {
       // Create new optometrist entry
-      await set(optomRef, { name, whatsApp, email, amount, comment });
+      await set(optomRef, { name, whatsApp, email, website, comment });
 
       // Increment the optometrist count
       await runTransaction(optomCountRef, (currentCount) => {

@@ -99,8 +99,9 @@ export default function Home() {
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center text-gray-700 font-medium whitespace-pre-line w-full md:w-1/2">
-            Trial our platform, provide feedback, and cancel anytime. Join our
-            pilot program to help us serve you better!
+            Trial our platform, provide feedback, and cancel anytime.
+            <br />
+            If our service grows your practice, you can keep it for R600/month after the trial.
           </p>
           <BasicForm />
         </section>

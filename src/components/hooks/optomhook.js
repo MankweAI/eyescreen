@@ -10,7 +10,7 @@ function useSubmitOptometristData() {
     name,
     whatsApp,
     email,
-    amount,
+    website,
     comment
   ) => {
     setLoading(true);
@@ -27,7 +27,7 @@ function useSubmitOptometristData() {
           name,
           whatsApp,
           email,
-          amount,
+          website,
           comment,
         }),
       });

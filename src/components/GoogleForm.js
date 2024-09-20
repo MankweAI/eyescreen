@@ -32,7 +32,7 @@ export default function BasicForm() {
       name,
       whatsApp,
       email,
-      amount,
+      website,
       comment
     );
     setIsOpen(true);
