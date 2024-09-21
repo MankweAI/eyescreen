@@ -81,7 +81,7 @@ export default function Home() {
                 />
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
-                    We send the user`s results to you and encourage them to
+                    We send the user`s results to you and ask them to
                     book a follow-up
                   </p>
                 </div>
