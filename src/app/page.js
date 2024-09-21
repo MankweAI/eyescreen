@@ -81,8 +81,8 @@ export default function Home() {
                 />
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
-                    We send the user`s results to you and ask them to
-                    book a follow-up
+                    We send the user`s results to you and ask them to book a
+                    follow-up
                   </p>
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default function Home() {
                 />
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
-                    For those who book, we send monthly eye care tips from you 
+                    For those who book, we send monthly eye care tips from you
                   </p>
                 </div>
               </div>
@@ -105,7 +105,8 @@ export default function Home() {
                 />
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
-                    For those who don`t book, we offer to send monthly eye care tips from you
+                    For those who don`t book, we offer to send monthly eye care
+                    tips from you
                   </p>
                 </div>
               </div>
@@ -137,10 +138,13 @@ export default function Home() {
               10+
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl text-center text-gray-700 font-medium whitespace-pre-line w-full md:w-1/2">
-              Registered participants. Goal: 100
+              Registered participants <br />
+              Goal: 100
             </p>
           </section>
           <br />
+          <br />
+          <div></div>
         </main>
       </div>
     </>
