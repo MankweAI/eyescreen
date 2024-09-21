@@ -62,7 +62,7 @@ export default function BasicForm() {
         </div>
         <div className="form-control">
           <label className="block text-sm font-medium text-gray-700">
-            WhatsApp Number (optional)
+            WhatsApp Number
           </label>
           <input
             type="text"

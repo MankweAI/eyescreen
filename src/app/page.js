@@ -81,8 +81,8 @@ export default function Home() {
                 />
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
-                    We send the user`s results to you and encourage the user to book
-                    a follow-up
+                    We send the user`s results to you and encourage the user to
+                    book a follow-up
                   </p>
                 </div>
               </div>
@@ -110,14 +110,14 @@ export default function Home() {
           </section>
           <section className="flex flex-col sm:flex-col justify-between  p-2 sm:p-4 md:p-6 lg:p-8 items-center w-full gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 mt-5 sm:mt-7 md:mt-10 lg:mt-12">
             <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-center font-black text-gray-700">
-              Become a volunteer for our two-month trial
+              Register for a two-month trial
             </h1>
 
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center text-gray-700 font-medium whitespace-pre-line w-full md:w-1/2">
-              Trial our platform, provide feedback, and cancel anytime.
+              Try us, give us feedback, and cancel anytime
               <br />
-              If our service grows your practice, you can keep it for R600/month
-              after the trial.
+              <br />
+              Keep it for R600/month only if you see value after testing. No contracts
             </p>
             <BasicForm />
           </section>
