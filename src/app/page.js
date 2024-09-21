@@ -122,7 +122,15 @@ export default function Home() {
             <BasicForm />
           </section>
 
-          <section className="flex flex-col sm:flex-col justify-between p-2 sm:p-4 md:p-6 lg:p-8 items-center w-full gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 mt-5 sm:mt-7 md:mt-10 lg:mt-12"></section>
+          <section className="flex flex-col sm:flex-col justify-between p-2 sm:p-4 md:p-6 lg:p-8 items-center w-full gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 mt-5 ">
+            <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-center font-black text-gray-700">
+              10+
+            </h1>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl text-center text-gray-700 font-medium whitespace-pre-line w-full md:w-1/2">
+              Registered participants. Goal: 100 
+            </p>
+          </section>
+          <br />
         </main>
       </div>
     </>

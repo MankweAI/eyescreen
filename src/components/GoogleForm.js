@@ -86,7 +86,7 @@ export default function BasicForm() {
         </div>
         <div className="form-control">
           <label className="block text-sm font-medium text-gray-700">
-            website
+            Website
           </label>
           <input
             type="text"
