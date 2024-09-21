@@ -22,7 +22,7 @@ export default function Home() {
                 increasing bookings for your practice
               </p>
               <div className="sm:w-1/2 lg:w-1/2 w-3/4 mt-8 ">
-                <h1 className="bg-[#C60D69] px-2 py-1 text-center rounded-sm text-white sm:px-3 sm:py-2  md:px-4 md:py-2  lg:px-4  text-2xl font-bold">
+                <h1 className="bg-[#C60D69] px-2 py-1 text-center rounded-xl text-white sm:px-3 sm:py-2  md:px-4 md:py-2  lg:px-4  text-2xl font-bold">
                   Launching Soon
                 </h1>
               </div>
@@ -43,7 +43,7 @@ export default function Home() {
             <div className="flex flex-col justify-between items-center sm:w-full gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 2xl:gap-7 mt-5 sm:mt-7 md:mt-10 lg:mt-12 xl:mt-15">
               <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-center font-black text-gray-700 p-2 flex justify-center gap-4">
                 About{" "}
-                <span className="text-[#C60D69] border-2 border-[#C60D69] px-2 rounded-xl text-2xl sm:text-3xl md:text-4xl text-center inline-block w-full">
+                <span className="text-[#C60D69] border-2 border-[#C60D69] px-2 rounded-2xl text-2xl sm:text-3xl md:text-4xl text-center inline-block w-full">
                   EyeScreen
                 </span>
               </h1>
@@ -68,8 +68,8 @@ export default function Home() {
                 />
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
-                    We achieve this by offering a simple, fun and non-diagnostic
-                    eye pre-screen on your website
+                    We achieve this by offering fun quizzes and simple and
+                    non-diagnostic eye pre-screen on your website
                   </p>
                 </div>
               </div>
@@ -81,8 +81,8 @@ export default function Home() {
                 />
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
-                    After the pre-screen we encourage every participant to book
-                    a comprehensive eye test with your practice
+                    We send the user`s results to you and encourage the user to book
+                    a follow-up
                   </p>
                 </div>
               </div>
@@ -94,8 +94,8 @@ export default function Home() {
                 />
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
-                    The platform comes with a optional booking platform that
-                    connects to your calender
+                    The platform comes with a booking platform that connects to
+                    your calender
                   </p>
                 </div>
               </div>
