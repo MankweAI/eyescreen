@@ -94,7 +94,7 @@ export default function Home() {
                 />
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
-                    For those who book, we maintain the relationship by sending monthly eye care tips from you 
+                    For those who book, we send monthly eye care tips from you 
                   </p>
                 </div>
               </div>
