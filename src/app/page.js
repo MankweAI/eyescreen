@@ -117,7 +117,7 @@ export default function Home() {
               Try us, give us feedback, and cancel anytime
               <br />
               <br />
-              Keep it for R600/month only if you see value after testing. No contracts
+              If we add value, keep us at R600/month. No contracts
             </p>
             <BasicForm />
           </section>
