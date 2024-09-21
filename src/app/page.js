@@ -81,7 +81,7 @@ export default function Home() {
                 />
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
-                    We send the user`s results to you and encourage the user to
+                    We send the user`s results to you and encourage them to
                     book a follow-up
                   </p>
                 </div>
@@ -94,8 +94,18 @@ export default function Home() {
                 />
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
-                    The platform comes with a booking platform that connects to
-                    your calender
+                    For those who book, we maintain the relationship by sending monthly eye care tips from you 
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-center items-center bg-transparent w-full sm:w-3/4 lg:w-3/4 xl:w-1/2 gap-2 p-0 rounded-xl">
+                <MdCheckCircle
+                  style={{ color: "#C60D69" }}
+                  className="h-6 w-6"
+                />
+                <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
+                    For those who don`t book, we offer to send monthly eye care tips from you
                   </p>
                 </div>
               </div>
@@ -127,7 +137,7 @@ export default function Home() {
               10+
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl text-center text-gray-700 font-medium whitespace-pre-line w-full md:w-1/2">
-              Registered participants. Goal: 100 
+              Registered participants. Goal: 100
             </p>
           </section>
           <br />
