@@ -48,7 +48,39 @@ function useSubmitOptometristData() {
     }
   };
 
-  return { submitOptometristData, loading, error, optomTotal };
+  const buttonClickCount = async () => {
+    setError(null);
+
+    try {
+      const response = await fetch("/api/buttonclickcount", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.ok) {
+        
+        // Optionally handle success (e.g., display a success message)
+      } else {
+        console.log("................... FAILED");
+        
+      }
+    } catch (err) {
+      
+      console.error("Error submitting data:", err);
+    } finally {
+      
+    }
+  };
+
+  return {
+    submitOptometristData,
+    buttonClickCount,
+    loading,
+    error,
+    optomTotal,
+  };
 }
 
 export default useSubmitOptometristData;

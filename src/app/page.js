@@ -7,11 +7,13 @@ import ImageSlider from "@/components/ImageSlider";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import ChatPopup from "@/components/ChatPopUp";
 
+
 export default function Home() {
+
   return (
     <>
       <GoogleAnalytics />
-      <div className="xl:container  w-full flex flex-col justify-center items-center">
+      <div className=" w-full flex flex-col justify-center items-center">
         <main className="w-full h-auto  flex flex-col justify-center items-center gap-0">
           <section className="flex flex-col sm:flex-row justify-between  p-2 sm:p-4 md:p-6 lg:p-8 items-center w-full gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 mt-5 ">
             <div className="flex flex-col justify-between items-center sm:w-full md:w-1/2 gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 2xl:gap-7 mt-5 sm:mt-7 md:mt-10 lg:mt-12 xl:mt-15">
@@ -143,9 +145,9 @@ export default function Home() {
               Goal: 100
             </p>
           </section>
+          <ChatPopup />
         </main>
       </div>
-      <ChatPopup />
     </>
   );
 }

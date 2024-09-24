@@ -79,15 +79,6 @@ const SimpleSlider = () => {
             className="w-auto h-[500px]"
           />
         </div>
-        <div className="flex items-center justify-center">
-          <Image
-            src="/images/test-d.png"
-            alt="Slide 1"
-            width={500}
-            height={500}
-            className="w-auto h-[500px]"
-          />
-        </div>
 
         <div className="flex items-center justify-center">
           <Image

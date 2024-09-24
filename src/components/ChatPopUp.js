@@ -1,12 +1,25 @@
 "use client";
 
 import React, { useState } from "react";
+import useSubmitOptometristData from "./hooks/optomhook";
 
 const ChatPopup = () => {
   const [isVisible, setIsVisible] = useState(true);
 
+  const { buttonClickCount } = useSubmitOptometristData();
+
+  const handleSubmit = async (event) => {
+        console.log("................... CLICKED");
+
+    event.preventDefault();
+
+
+    await buttonClickCount();
+    
+  };
+
   const handleClose = () => {
-    setIsVisible(false); 
+    setIsVisible(false);
   };
 
   return (
@@ -42,7 +55,7 @@ const ChatPopup = () => {
             className="
               flex items-center justify-between 
               w-full 
-              bg-[#56AEFF] rounded-3xl shadow-md 
+              bg-[#56AEFF] rounded-full shadow-md 
               px-2 sm:px-4 py-2 
               border-2
               hover:bg-[#4a99e6] 
@@ -53,7 +66,7 @@ const ChatPopup = () => {
               border: "0.2px solid #56AEFF",
               background: "#56AEFF",
             }}
-            onClick={() => {}}
+            onClick={handleSubmit}
           >
             {/* Text Section */}
             <div>
