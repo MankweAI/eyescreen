@@ -5,6 +5,7 @@ import { MdCheckCircle } from "react-icons/md";
 import BasicForm from "@/components/GoogleForm";
 import ImageSlider from "@/components/ImageSlider";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import ChatPopup from "@/components/ChatPopUp";
 
 export default function Home() {
   return (
@@ -133,7 +134,7 @@ export default function Home() {
             <BasicForm />
           </section>
 
-          <section className="flex flex-col sm:flex-col justify-between p-2 sm:p-4 md:p-6 lg:p-8 items-center w-full gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 mt-5 ">
+          <section className="flex flex-col sm:flex-col justify-between p-2  items-center w-full gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 mt-0  ">
             <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-center font-black text-gray-700">
               10+
             </h1>
@@ -142,11 +143,9 @@ export default function Home() {
               Goal: 100
             </p>
           </section>
-          <br />
-          <br />
-          <div></div>
         </main>
       </div>
+      <ChatPopup />
     </>
   );
 }
