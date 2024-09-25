@@ -72,7 +72,8 @@ export default function Home() {
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
                     We achieve this by offering fun quizzes and simple and
-                    non-diagnostic eye pre-screen on your website
+                    non-diagnostic eye pre-screen on your social media platforms
+                    and website
                   </p>
                 </div>
               </div>
@@ -97,7 +98,8 @@ export default function Home() {
                 />
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
-                    For those who book, we send weekly eye care tips in your name
+                    For those who book, we send weekly eye care tips in your
+                    name (optional)
                   </p>
                 </div>
               </div>
@@ -109,7 +111,7 @@ export default function Home() {
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
                     For those who don`t book, we offer to send weekly eye care
-                    tips in your name
+                    tips in your name (optional)
                   </p>
                 </div>
               </div>
