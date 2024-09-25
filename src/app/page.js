@@ -97,7 +97,7 @@ export default function Home() {
                 />
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
-                    For those who book, we send monthly eye care tips from you
+                    For those who book, we send weekly eye care tips in your name
                   </p>
                 </div>
               </div>
@@ -108,8 +108,8 @@ export default function Home() {
                 />
                 <div className="flex justify-center items-center bg-transparent w-full gap-2 p-2 border-2 rounded-xl">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-start text-gray-700 font-medium whitespace-pre-line w-full">
-                    For those who don`t book, we offer to send monthly eye care
-                    tips from you
+                    For those who don`t book, we offer to send weekly eye care
+                    tips in your name
                   </p>
                 </div>
               </div>
@@ -131,7 +131,7 @@ export default function Home() {
               Try us, give us feedback, and cancel anytime
               <br />
               <br />
-              If we made a difference, keep us at R600/month
+              If we made a difference, keep us for R600/month
             </p>
             <BasicForm />
           </section>
